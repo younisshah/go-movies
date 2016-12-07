@@ -23,7 +23,8 @@ func (req MovieRequest)Search() /*(MovieResponse, error)*/ {
 	buffer.WriteString(req.Title)
 
 	log.Println(buffer.String())
-
+	
+	// fucking hell! fuck this shit
 	client := http.Client{}
 	if req, err := http.NewRequest("GET", buffer.String(), nil); err != nil {
 		log.Println("e", err)
